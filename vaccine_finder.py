@@ -18,7 +18,7 @@ url1 = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByD
 
 try:
     my_params = {'pincode' : pin_code, 'date': date}
-
+    
     response = requests.get(
         url,
         params = my_params,
@@ -28,7 +28,7 @@ try:
     result = response.json()
     for i in result["centers"]:
         centers[i["center_id"]] = i
-
+    count = 0
     for id in district_ids:
         my_params1 = {'district_id': id, 'date': date}
         response = requests.get(
@@ -49,8 +49,12 @@ try:
                     print(f"{center['state_name']}, {center['district_name']}, {center['name']}, from: {center['from']}, to: {center['to']}, fee_type: {center['fee_type']}")
                     flag1 = True
                 flag = True
+                if session['available_capacity'] > 0:
+                    count += 1
                 print(f"{session['date']}, capacity: {session['available_capacity']}, age limit: {session['min_age_limit']}, vaccine: {session['vaccine']}, slots: {session['slots']}")
     if flag == False:
         print("No vaccines available!")
+    else:
+        print(f"{count} sessions available.")
 except requests.exceptions.HTTPError as err:
     raise SystemExit(err)
