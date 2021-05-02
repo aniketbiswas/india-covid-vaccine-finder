@@ -1,8 +1,11 @@
 import requests
-
+# Edit below details
 pin_code = "140603"
 date = "03-05-2021"
 district_ids = ['108', '187', '496']
+
+## No more edits
+
 url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin"
 url1 = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict"
 
