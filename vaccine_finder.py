@@ -7,9 +7,9 @@
 
 import requests
 # Edit below details
-pin_code = "140603"
-date = "03-05-2021"
-district_ids = ['108', '187', '496']
+pin_code = "140603"    # Enter your pin code
+date = "03-05-2021"    # Enter tomorrow's date it'll find next 7 days information. Simply use a later date to find more slots. 
+district_ids = ['108', '187', '496']  # Optional use https://cdn-api.co-vin.in/api/v2/admin/location/districts/12 and https://cdn-api.co-vin.in/api/v2/admin/location/states
 
 ## No more edits
 
