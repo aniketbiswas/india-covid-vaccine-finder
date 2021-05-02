@@ -21,7 +21,9 @@ response = requests.get(
     params = my_params,
 )
 centers = {}
-for i in response.json()["centers"]:
+
+result = response.json()
+for i in result["centers"]:
     centers[i["center_id"]] = i
 
 for id in district_ids:
