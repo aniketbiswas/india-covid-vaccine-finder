@@ -19,7 +19,7 @@ port = 465  # For SSL leave it as it is
 smtp_server = "smtp.gmail.com"
 sender_email = "your_email@gmail.com"  # Enter your gmail address
 receiver_email = "any_email@any.com"  # Enter receiver address
-password = "password"  # Enter your password
+password = input("Enter password: ")  # Enter your password
 
 ## Make sure you use your useless gmail for this and enable less secure application by visiting this link 
 ## https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4NxzCHX3C08uNJHsA8uPlkV4_QGJ_8fpWZYa8uFXcss_NyY9_RQb8Nlw4L4T5IZ5a8tQQQbbfdOaHXV-cTsFgfDdHcAwQ
