@@ -67,7 +67,7 @@ def fun(pincode = "201301", district_ids = [], date = "04-05-2021"):
                     if session['available_capacity'] > 0:
                         count += 1
                         res += f"{session['date']}, capacity: {session['available_capacity']}, age limit: {session['min_age_limit']}, vaccine: {session['vaccine']}, slots: {session['slots']}\n"
-                    print(f"{session['date']}, capacity: {session['available_capacity']}, age limit: {session['min_age_limit']}, vaccine: {session['vaccine']}, slots: {session['slots']}")
+                        print(f"{session['date']}, capacity: {session['available_capacity']}, age limit: {session['min_age_limit']}, vaccine: {session['vaccine']}, slots: {session['slots']}")
         if flag == False:
             print("No vaccines available!")
         else:
